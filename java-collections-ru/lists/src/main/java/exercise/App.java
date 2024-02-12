@@ -12,8 +12,9 @@ public static boolean scrabble(String abc, String word) {
         if (abc.indexOf(ch) == -1) {
             return false;
         }
-        abc = abc.substring(0, abc.indexOf(ch)) + abc.substring(abc.indexOf(ch) + 1)
+        abc = abc.substring(0, abc.indexOf(ch)) + abc.substring(abc.indexOf(ch) + 1);
     }
     return true;
 }
 //END
+
