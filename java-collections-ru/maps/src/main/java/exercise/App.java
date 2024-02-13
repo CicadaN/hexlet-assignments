@@ -18,23 +18,25 @@ public class App {
                 }
             }
         }
-
         return wordCount;
     }
 
     public static String toString(Map<String, Integer> wordCount) {
         StringBuilder result = new StringBuilder();
         result.append("{\n");
-        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
-            result.append("  ")
-                    .append(entry.getKey())
-                    .append(": ")
-                    .append(entry.getValue())
-                    .append("\n");
+        if (wordCount.isEmpty()) {
+            result.append("}");
+        } else {
+            for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+                result.append("  ")
+                        .append(entry.getKey())
+                        .append(": ")
+                        .append(entry.getValue())
+                        .append("\n");
+            }
+
+            result.append("}");
         }
-
-        result.append("}");
-
         return result.toString();
     }
 }
