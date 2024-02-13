@@ -6,7 +6,9 @@ import java.util.Map;
 public class App {
     public static Map<String, Integer> getWordCount(String sentence) {
         Map<String, Integer> wordCount = new HashMap<>();
+
         String[] words = sentence.split(" ");
+
         for (String word : words) {
             if (!wordCount.containsKey(word)) {
                 wordCount.put(word, 1);
@@ -31,6 +33,4 @@ public class App {
         return result.toString();
     }
 }
-
-
 //END
