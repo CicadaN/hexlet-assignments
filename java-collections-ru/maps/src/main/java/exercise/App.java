@@ -25,6 +25,7 @@ public class App {
         StringBuilder result = new StringBuilder();
         result.append("{\n");
         if (wordCount.isEmpty()) {
+            result.deleteCharAt(result.length() - 1); // Remove the newline character
             result.append("}");
         } else {
             for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
