@@ -12,8 +12,7 @@ public class App {
         for (String word : words) {
             if (!wordCount.containsKey(word)) {
                 wordCount.put(word, 1);
-            }
-            else {
+            } else {
                 int count = wordCount.get(word);
                 wordCount.put(word, count + 1);
             }
