@@ -21,15 +21,13 @@ public class App {
     }
 
     public static String toString(Map<String, Integer> wordCount) {
-        StringBuilder result = new StringBuilder();
-        result.append("{\n");
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n");
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
-            result.append("  ");
-            result.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+            sb.append("  " + entry.getKey() + ": " + entry.getValue() + "\n");
         }
-        result.append("}");
-
-        return result.toString();
+        sb.append("}");
+        return sb.toString();
     }
 }
 //END
