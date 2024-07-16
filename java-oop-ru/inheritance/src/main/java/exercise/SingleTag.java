@@ -4,16 +4,13 @@ import java.util.Map;
 
 // BEGIN
 public class SingleTag extends Tag {
-
-    public SingleTag(String tagName, Map<String, String> attributes) {
-        super(tagName, attributes);
+    public SingleTag(String nameTag, Map<String, String> attributes) {
+        super(nameTag, attributes);
     }
 
+    @Override
     public String toString() {
-        return String.format("<%s %s/>", tagName, getAttributesString());
+        return "<" + nameTag + (attributes.isEmpty() ? "" : " " + renderAttributes()) + ">";
     }
-
-
-
 }
 // END
