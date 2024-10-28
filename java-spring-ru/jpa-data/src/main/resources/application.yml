@@ -1,0 +1,14 @@
+---
+
+# BEGIN
+spring:
+  jpa:
+    show-sql: on
+    hibernate:
+      ddl-auto: update
+  output:
+    ansi:
+      enabled: ALWAYS
+  h2:
+    console:
+      enabled: true
